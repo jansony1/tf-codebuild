@@ -31,7 +31,7 @@ phases:
       - "rm terraform.zip"
       - "yum update -y"
       - "yum install -y curl jq awscli"
-      - "pip3 install checkov"
+      - "pip3 install checkov -i https://pypi.tuna.tsinghua.edu.cn/simple"
       - "yum install -y golang"
       - "wget -q -O tfsec https://github.com/aquasecurity/tfsec/releases/download/${TFSEC_VERSION}/tfsec-linux-amd64"
       - "chmod +x ./tfsec"
