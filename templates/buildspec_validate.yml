@@ -33,8 +33,7 @@ phases:
       - "yum install -y curl jq awscli"
       - "pip3 install checkov -i https://pypi.tuna.tsinghua.edu.cn/simple"
       - "yum install -y golang"
-      - "chmod +x ./tfsec"
-      - "mv ./tfsec /usr/local/bin/tfsec"
+   
   build:
     commands:
       - "cd ${CODEBUILD_SRC_DIR}/${CODE_SRC_DIR}"
@@ -52,7 +51,4 @@ reports:
     files:
       - "./reports/checkov.xml"
     file-format: "JUNITXML"
-  tfsec-reports:
-    files:
-      - "./reports/tfsec-junit.xml"
-    file-format: "JUNITXML"
+
